@@ -1,20 +1,18 @@
 (function() {
-  var beerListingsEl = document.querySelector('beer-listings');
 
-  function registerByQuery(querySelector) {
-    var templateString = document.querySelector(querySelector).innerHTML;
-    templateString = templateString.replace('&gt;', '>');
-
-    return Handlebars.compile(templateString);
+  function registerByQuery(query) {
+    var el = document.querySelector(query);
+    return Handlebars.compile(el.innerHTML);
   }
 
-  var handlebarsTemplate = registerByQuery('beer-template');
+  var template = registerByQuery('#beer-template');
+  var beerListingsEl = document.querySelector('.beer-listings');
 
-  var loadBeerData = function(data) {
-    var allBeers = '';
-    allBeers = handlebarsTemplate(data);
-    beerListingsEl = allBeers;
-  };
+  var allBeers = '';
 
-  loadBeerData();
+  beerData.data.forEach(function(data) {
+    allBeers += template(data);
+  });
+
+  beerListingsEl.innerHTML = allBeers;
 })();
