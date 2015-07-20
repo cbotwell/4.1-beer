@@ -9,7 +9,18 @@
 </head>
 <body>
 
-<div class="beer-listings"></div>
+<div class="wrapper">
+    <div class="sort-options"></div>
+    <div class="beer-listings"></div>
+</div>
+
+<template id="beer-template">
+    <img src="https://raw.githubusercontent.com/TIY-LR-FEE-2015-June/assignments/master/2.1-beer-layout/bottle-1.png" alt="beer" />
+    <h2>{{ name }}</h2>
+    <p>ABV: {{ abv }}</p>
+    <p>{{ description }}</p>
+    <button> <i class="fa fa-plus-circle"></i> Add To Cart</button>
+</template>
 
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="handlebars/handlebars.js"></script>
