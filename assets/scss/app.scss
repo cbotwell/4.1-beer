@@ -14,3 +14,63 @@ html {
 }
 
 // Your SASS Journey Starts Here
+
+$main-color: #338DD9;
+$alt-color: #C3C3C3;
+$main-border: 3px solid $main-color;
+
+// global styles
+body {
+    font-family: Helvetica, sans-serif;
+}
+.outer-container {
+    @include outer-container(1140px);
+}
+.wrapper {
+    margin: 50px 0;
+    padding: 30px;
+    border: $main-border;
+    border-radius: 5px;
+}
+.sort-options {
+    overflow: auto;
+    color: $main-color;
+    font-size: 2em;
+    .fa {
+        float: right;
+        margin: 30px;
+    }
+}
+
+.beer-listings {
+    border-top: $main-border;
+    padding-top: 30px;
+}
+
+.beer {
+    font-size: 1em;
+    h2, .description,  {
+        color: $main-color;
+    }
+    .abv {
+        color: $alt-color;
+    }
+    button {
+        color: white;
+        background: $main-color;
+        border-radius: 3px;
+        border: none;
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+// Grid Styles
+
+.grid {
+
+}
+
+// List Styles
+
+
