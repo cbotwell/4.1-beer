@@ -92,6 +92,14 @@ body {
         button {
             margin-top: 20px;
         }
+        .description {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .show-full {
+            white-space: normal;
+        }
     }
 }
 
@@ -100,14 +108,7 @@ body {
 .list {
     .beer {
         @include row($display: block);
-        max-height: 158px;
-        position: relative;
 
-        h2, p, button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
         img, h2, button {
             @include span-columns(2);
         }
@@ -120,8 +121,17 @@ body {
             white-space: nowrap;
             text-overflow: ellipsis;
         }
+        .show-full {
+            white-space: normal;
+        }
         button {
             @include omega();
+        }
+        img, h2, .abv, .description, button {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 3px;
         }
     }
 }
