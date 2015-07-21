@@ -1882,6 +1882,14 @@ body {
     color: #2273b7; }
   .sort-options .grid-button:active, .sort-options .list-button:active {
     color: #C3C3C3; }
+  .sort-options .cart, .sort-options .cart i {
+    float: left;
+    margin: 0; }
+  .sort-options .cart {
+    margin: 30px 0 0 30px;
+    color: #C3C3C3; }
+    .sort-options .cart i {
+      margin-right: 10px; }
 
 .beer-listings {
   border-top: 3px solid #338DD9;
@@ -1901,6 +1909,12 @@ body {
     border: none;
     padding: 10px;
     font-size: 1em; }
+  .beer button:hover {
+    background: #2273b7; }
+  .beer button:active {
+    background: #89bde9; }
+  .beer button:focus {
+    outline: none; }
 
 .grid .beer {
   float: left;
