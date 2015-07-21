@@ -27,7 +27,7 @@ body {
     @include outer-container(1140px);
 }
 .wrapper {
-    margin: 50px 0;
+    margin: 50px;
     padding: 30px;
     border: $main-border;
     border-radius: 5px;
