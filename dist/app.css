@@ -1925,11 +1925,17 @@ body {
     margin-top: 20px; }
 
 .list .beer {
-  display: block; }
+  display: block;
+  max-height: 158px;
+  position: relative; }
   .list .beer::after {
     clear: both;
     content: "";
     display: table; }
+  .list .beer h2, .list .beer p, .list .beer button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
   .list .beer img, .list .beer h2, .list .beer button {
     float: left;
     display: block;
@@ -1948,7 +1954,10 @@ body {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%; }
+    width: 40.29137%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
     .list .beer .description:last-child {
       margin-right: 0; }
   .list .beer button {
