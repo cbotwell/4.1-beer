@@ -40,11 +40,18 @@ body {
         float: right;
         margin: 30px;
     }
+    .grid-button:hover, .list-button:hover {
+        color: darken($main-color, 10%);
+    }
+    .grid-button:active, .list-button:active {
+        color: $alt-color;
+    }
 }
 
 .beer-listings {
     border-top: $main-border;
     padding-top: 30px;
+    overflow: auto;
 }
 
 .beer {
@@ -68,11 +75,42 @@ body {
 // Grid Styles
 
 .grid {
-
+    .beer {
+        @include span-columns(4);
+        @include omega(3n);
+        text-align: center;
+        margin-bottom: 20px;
+        h2  {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .abv {
+            margin: 20px 0;
+        }
+        button {
+            margin-top: 20px;
+        }
+    }
 }
 
 // List Styles
 
 .list {
+    .beer {
+        @include row($display: block);
 
+        img, h2, button {
+            @include span-columns(2);
+        }
+        .abv {
+            @include span-columns(1);
+        }
+        .description {
+            @include span-columns(5);
+        }
+        button {
+            @include omega();
+        }
+    }
 }
