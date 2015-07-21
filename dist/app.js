@@ -32,4 +32,10 @@
 
   list.onclick();
 
+  var description = document.querySelector('.description');
+
+  description.onclick = function() {
+    this.classList.toggle('show-full');
+  };
+
 })();
