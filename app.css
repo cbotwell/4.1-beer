@@ -1931,7 +1931,8 @@ body {
     white-space: normal; }
 
 .list .beer {
-  display: block; }
+  display: block;
+  margin-bottom: 30px; }
   .list .beer::after {
     clear: both;
     content: "";
