@@ -108,7 +108,7 @@ body {
 .list {
     .beer {
         @include row($display: block);
-
+        margin-bottom: 30px;
         img, h2, button {
             @include span-columns(2);
         }
