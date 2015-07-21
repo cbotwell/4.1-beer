@@ -46,6 +46,17 @@ body {
     .grid-button:active, .list-button:active {
         color: $alt-color;
     }
+    .cart, .cart i {
+        float: left;
+        margin: 0;
+    }
+    .cart {
+        margin: 30px 0 0 30px;
+        color: $alt-color;
+        i {
+            margin-right: 10px;
+        }
+    }
 }
 
 .beer-listings {
@@ -69,6 +80,15 @@ body {
         border: none;
         padding: 10px;
         font-size: 1em;
+    }
+    button:hover {
+        background: darken($main-color, 10%);
+    }
+    button:active {
+        background: lighten($main-color, 20%)
+    }
+    button:focus {
+        outline: none;
     }
 }
 
