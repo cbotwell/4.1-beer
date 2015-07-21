@@ -1923,19 +1923,19 @@ body {
     margin: 20px 0; }
   .grid .beer button {
     margin-top: 20px; }
+  .grid .beer .description {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .grid .beer .show-full {
+    white-space: normal; }
 
 .list .beer {
-  display: block;
-  max-height: 158px;
-  position: relative; }
+  display: block; }
   .list .beer::after {
     clear: both;
     content: "";
     display: table; }
-  .list .beer h2, .list .beer p, .list .beer button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
   .list .beer img, .list .beer h2, .list .beer button {
     float: left;
     display: block;
@@ -1960,5 +1960,12 @@ body {
     text-overflow: ellipsis; }
     .list .beer .description:last-child {
       margin-right: 0; }
+  .list .beer .show-full {
+    white-space: normal; }
   .list .beer button {
     margin-right: 0; }
+  .list .beer img, .list .beer h2, .list .beer .abv, .list .beer .description, .list .beer button {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px; }
