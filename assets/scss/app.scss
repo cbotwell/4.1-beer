@@ -14,3 +14,144 @@ html {
 }
 
 // Your SASS Journey Starts Here
+
+$main-color: #338DD9;
+$alt-color: #C3C3C3;
+$main-border: 3px solid $main-color;
+
+// global styles
+body {
+    font-family: Helvetica, sans-serif;
+}
+.outer-container {
+    @include outer-container(1140px);
+}
+.wrapper {
+    margin: 50px;
+    padding: 30px;
+    border: $main-border;
+    border-radius: 5px;
+}
+.sort-options {
+    overflow: auto;
+    color: $main-color;
+    font-size: 2em;
+    .fa {
+        float: right;
+        margin: 30px;
+    }
+    .grid-button:hover, .list-button:hover {
+        color: darken($main-color, 10%);
+    }
+    .grid-button:active, .list-button:active {
+        color: $alt-color;
+    }
+    .cart, .cart i {
+        float: left;
+        margin: 0;
+    }
+    .cart {
+        margin: 30px 0 0 30px;
+        color: $alt-color;
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+.beer-listings {
+    border-top: $main-border;
+    padding-top: 30px;
+    overflow: auto;
+}
+
+.beer {
+    font-size: 1em;
+    h2, .description,  {
+        color: $main-color;
+    }
+    .abv {
+        color: $alt-color;
+    }
+    button {
+        color: white;
+        background: $main-color;
+        border-radius: 3px;
+        border: none;
+        padding: 10px;
+        font-size: 1em;
+    }
+    button:hover {
+        background: darken($main-color, 10%);
+    }
+    button:active {
+        background: lighten($main-color, 20%)
+    }
+    button:focus {
+        outline: none;
+    }
+}
+
+// Grid Styles
+
+.grid {
+    .beer {
+        @include span-columns(4);
+        @include omega(3n);
+        text-align: center;
+        margin-bottom: 20px;
+
+        h2  {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .abv {
+            margin: 20px 0;
+        }
+        button {
+            margin-top: 20px;
+        }
+        .description {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .show-full {
+            white-space: normal;
+        }
+    }
+}
+
+// List Styles
+
+.list {
+    .beer {
+        @include row($display: block);
+        margin-bottom: 30px;
+        img, h2, button {
+            @include span-columns(2);
+        }
+        .abv {
+            @include span-columns(1);
+        }
+        .description {
+            @include span-columns(5);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .show-full {
+            white-space: normal;
+        }
+        button {
+            @include omega();
+        }
+        img, h2, .abv, .description, button {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 3px;
+        }
+    }
+}

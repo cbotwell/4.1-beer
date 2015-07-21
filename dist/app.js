@@ -40,19 +40,4 @@
     };
   }
 
-  var totalEl = document.querySelector('.total');
-  var addToCart = document.querySelectorAll('button');
-
-  for (var x = addToCart.length - 1; x >= 0; x--) {
-    addToCart[x].onclick = function() {
-      if (totalEl.innerHTML === 'Cart') {
-        totalEl.innerHTML = 1;
-      } else {
-        var currentNum = parseInt(totalEl.innerHTML);
-        var newNum = currentNum + 1;
-        totalEl.innerHTML = newNum;
-      }
-    };
-  }
-
 })();
